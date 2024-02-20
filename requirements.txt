@@ -1,3 +1,4 @@
 aiohttp
 ansible-core
+dbus-python
 netaddr
