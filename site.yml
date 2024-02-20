@@ -1,0 +1,7 @@
+---
+- name: Example
+  hosts: all
+
+  tasks:
+    - name: Test hosts can execute tasks
+      ansible.builtin.ping:
