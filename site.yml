@@ -6,11 +6,8 @@
     - name: Test hosts can execute tasks
       ansible.builtin.ping:
 
-    - name: Gather information about active zones
-      ansible.posix.firewalld_info:
-        active_zones: true
-      register: result
-
-    - name: Print default zone for debugging
-      ansible.builtin.debug:
-        var: result.firewalld_info.default_zone
+    - name: Set authorized keys taken from url
+      ansible.posix.authorized_key:
+        user: root
+        state: present
+        key: https://github.com/jcmdln.keys
